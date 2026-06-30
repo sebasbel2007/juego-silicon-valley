@@ -1,0 +1,14 @@
+{
+  "name": "incubator-chaos",
+  "version": "0.1.0",
+  "description": "Silicon Valley pixel-art game built with Phaser 3",
+  "scripts": {
+    "dev":   "npx live-server --port=3000 --open=index.html",
+    "start": "npm run dev"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "keywords": ["phaser3", "pixelart", "silicon-valley", "game"],
+  "license": "MIT"
+}

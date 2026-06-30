@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Incubator Chaos</title>
+    <link rel="stylesheet" href="src/style.css">
+  </head>
+  <body>
+    <!-- Phaser 3 via CDN (reemplazar por local en producción) -->
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>
+    <script type="module" src="src/main.js?v=11"></script>
+    <script>
+      // Forzar foco en el canvas para que reciba eventos de teclado
+      window.addEventListener('load', () => {
+        const tryFocus = () => {
+          const canvas = document.querySelector('canvas');
+          if (canvas) { canvas.setAttribute('tabindex', '0'); canvas.focus(); }
+          else setTimeout(tryFocus, 100);
+        };
+        tryFocus();
+      });
+    </script>
+  </body>
+</html>
